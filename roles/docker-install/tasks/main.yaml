@@ -1,0 +1,23 @@
+- name: mkdir docker_root dir
+  file:
+    path: /opt/docker
+    state: present
+
+- name: copy rpm to remote
+  copy:
+    src: /etc/ansible/kubernetes/docker/docker-ce-18.06.3.ce-3.el7.x86_64.rpm
+    dest: /opt/docker
+
+- name: copy rpm to remote
+  copy:
+    src: /etc/ansible/kubernetes/docker/docker-distribution-2.6.2-2.git48294d9.el7.x86_64.rpm
+    dest: /opt/docker
+
+- name: install docker rpm
+  yum:
+    name: "{{ packages }}"
+    vars:
+      packages:
+      - /opt/docker/docker-ce-18.06.3.ce-3.el7.x86_64.rpm
+      - /opt/docker/docker-distribution-2.6.2-2.git48294d9.el7.x86_64.rpm
+    state: present

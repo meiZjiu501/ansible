@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8c21b0cc-49bb-4902-be3c-aeb720b31632" name="nongfu">
+        <fileTransfer rootFolder="/etc/ansible" accessType="SFTP" host="10.4.7.10" port="22" sshConfigId="ec13c6c5-657a-4be1-bd62-749d1f6cb4a8" sshConfig="root@10.4.7.10:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
